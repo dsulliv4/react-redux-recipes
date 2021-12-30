@@ -4,6 +4,7 @@ import App from './App';
 import { Provider } from 'react-redux';
 import rootReducer from './reducers';
 import { configureStore } from '@reduxjs/toolkit'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const store = configureStore({
   reducer: rootReducer
