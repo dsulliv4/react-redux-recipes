@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import DeleteRecipeButton from '../Buttons/DeleteRecipeButton.js'
 import EditRecipeButton from '../Buttons/EditRecipeButton'
 import RecipeDescription from './RecipeDescription.js'
-import MealFormContainer from '../../containers/RecipeFormContainer.js'
+import RecipeFormContainer from '../../containers/RecipeFormContainer.js'
 import './card-style.css'
 
 
-export class MealCard extends Component {
+export class RecipeCard extends Component {
   constructor(props) {
     super(props)
     this.state = {

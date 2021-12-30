@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { MdRestaurantMenu } from 'react-icons/md'
 import { FaBars, FaTimes } from 'react-icons/fa';
-import './Navbar.css';
+import './navbar.css';
 import { IconContext } from 'react-icons/lib';
 
 function Navbar() {
@@ -19,7 +19,7 @@ function Navbar() {
       <div className='navbar-container container'>
         <NavLink to='/' className="navbar-logo">
           <MdRestaurantMenu className='navbar-icon' />
-          PREPPED NOLA
+          Food Sensitivity Tracker
         </NavLink>
         <div className='menu-icon' onClick={handleClick}>
           {click ? <FaTimes /> : <FaBars />}

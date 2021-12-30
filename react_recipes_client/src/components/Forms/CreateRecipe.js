@@ -1,8 +1,8 @@
 import React from 'react'
 import RecipeForm from './RecipeForm'
-import CreateMealButton from '../Buttons/CreateRecipeButton'
+import CreateRecipeButton from '../Buttons/CreateRecipeButton'
 
-const RecipeFormCreating = (props) => {
+const CreateRecipe = (props) => {
   
     return (
       <form onSubmit={props.handleOnCreate}>

@@ -1,13 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-import { deleteMeal } from '../../actions/mealsActions.js'
+import { deleteRecipe } from '../../actions/recipeActions.js'
 
-const DeleteMealButton = props => {
+const DeleteRecipeButton = props => {
 
   function handleOnClick() {
    window.confirm("Are you sure you wish to delete this item?") &&
-   props.deleteMeal(props.id, props.history)
+   props.deleteRecipe(props.id, props.history)
   }
 
 
@@ -19,4 +19,4 @@ const DeleteMealButton = props => {
 
 }
 
-export default withRouter(connect(null, { deleteMeal })(DeleteMealButton));
+export default withRouter(connect(null, { deleteRecipe })(DeleteRecipeButton));

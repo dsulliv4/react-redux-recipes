@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import RecipeInput from '../components/Forms/MealInput';
+import RecipeInput from '../components/Forms/RecipeInput';
 
 // in refactoring, what's ridiculous is that this container
 // is now contained in another container
@@ -32,7 +32,7 @@ class RecipeFormContainer extends Component {
         <div className="container">
           <div>
             <br/>
-              <h3>Create a new Meal</h3>
+              <h3>Create a new Recipe:</h3>
             <br/>
           </div>
           <RecipeInput

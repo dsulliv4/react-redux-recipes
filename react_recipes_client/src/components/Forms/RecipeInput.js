@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router';
 import { connect } from 'react-redux'
 import { createRecipe, updateRecipe } from '../../actions/recipeActions.js'
-import MealFormUpdating from './RecipeFormUpdating'
-import MealFormCreating from './RecipeFormCreating'
+import UpdateRecipe from './UpdateRecipe.js'
+import CreateRecipe from './CreateRecipe.js'
 
 
 export class RecipeInput extends Component {
@@ -51,8 +51,8 @@ export class RecipeInput extends Component {
         const tempState = {...this.state};
         delete tempState.errors;
         delete tempState.editing;
-        const mealData = {
-          meal: tempState
+        const recipeData = {
+          recipe: tempState
         };
         console.log('a')
         this.props.createRecipe(recipeData, this.props.history);
@@ -68,8 +68,8 @@ export class RecipeInput extends Component {
         const tempState = {...this.state};
         delete tempState.errors;
         delete tempState.editing;
-        const tempMeal = {
-          meal: tempState
+        const tempRecipe = {
+          recipe: tempState
         };
         // onEdingChange is passed down from MealCard as Parent
         // this is double to ensure that editing is no longer true in any state anywhere in application
@@ -87,7 +87,7 @@ export class RecipeInput extends Component {
     render() { 
         if (this.state.editing === true ) {
           return (
-              <RecipeFormUpdating
+              <UpdateRecipe
                 handleOnUpdate={this.handleOnUpdate.bind(this)}
                 handleOnChange={this.handleOnChange.bind(this)}
                 handleOnSelect={this.handleOnSelect.bind(this)} 
@@ -103,7 +103,7 @@ export class RecipeInput extends Component {
           )
         } else {  
         return (
-            <RecipeFormCreating
+            <CreateRecipe
               handleOnCreate={this.handleOnCreate.bind(this)}
               handleOnChange={this.handleOnChange.bind(this)}
               handleOnSelect={this.handleOnSelect.bind(this)}

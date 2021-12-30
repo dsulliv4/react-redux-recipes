@@ -9,7 +9,7 @@ class RecipeListContainer extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      mealFilter: ""
+      recipeFilter: ""
     }
   }
 
@@ -23,7 +23,7 @@ class RecipeListContainer extends Component {
 
   queryRecipes = () => {
     let findAlike = this.state.recipeFilter.toLowerCase()
-    return this.props.recipes.filter ((meal) => 
+    return this.props.recipes.filter ((recipe) => 
       recipe.name.toLowerCase().includes(findAlike) || recipe.description.toLowerCase().includes(findAlike) || recipe.category.toLowerCase().includes(findAlike)
     ).sort(function(a,b){return (a.id - b.id)})
   }
@@ -33,9 +33,9 @@ class RecipeListContainer extends Component {
         return <div className="container">This may take a few seconds...</div>
       }
     else {
-      const recipeList = this.queryRecipes().map ((meal) => {
+      const recipeList = this.queryRecipes().map ((recipe) => {
         return (
-         <div className="col-md-4" id={meal.id}>
+         <div className="col-md-4" id={recipe.id}>
             <RecipeCard
             key={recipe.id}
             id={recipe.id}
@@ -58,13 +58,13 @@ class RecipeListContainer extends Component {
             <div className="container-fluid d-flex justify-content-center" >
               <div className='card text-center shadow' >
                 <label htmlFor="Search">Search by Name: </label>
-                <input type="text" id="filter" value={this.state.mealFilter} onChange={this.handleSearch} />
+                <input type="text" id="filter" value={this.state.recipeFilter} onChange={this.handleSearch} />
               </div>
             </div>
           </span>
           <div className="container-fluid d-flex justify-content-center">
             <div className="row">
-              { mealsList }
+              { recipeList }
             </div>
           </div>
         </div>
@@ -74,13 +74,13 @@ class RecipeListContainer extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  deleteRecipe: id => dispatch ({type: "DELETE_MEAL", id})
+  deleteRecipe: id => dispatch ({type: "DELETE_RECIPE", id})
 })
 
 const mapStateToProps = state => {
   return {
-      meals: state.mealsReducer.meals,
-      loading: state.mealsReducer.loading
+      recipes: state.recipeReducer.meals,
+      loading: state.recipeReducer.loading
   }
 }
 

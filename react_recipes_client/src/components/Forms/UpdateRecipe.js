@@ -2,7 +2,7 @@ import React from 'react'
 import RecipeForm from './RecipeForm'
 import UpdateRecipeButton from '../Buttons/UpdateRecipeButton'
 
-const RecipeFormUpdate = (props) => {
+const UpdateRecipe = (props) => {
 
     return (
       <form onSubmit={props.handleOnUpdate}>
@@ -26,4 +26,4 @@ const RecipeFormUpdate = (props) => {
     )
 }
 
-export default RecipeFormUpdating
+export default UpdateRecipe

@@ -4,13 +4,13 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux'
 
 import './App.css'
-import Nav from './components/Nav/Nav'
+import Nav from './components/Nav/Navbar.js'
 import Footer from './components/Footer/Footer.js'
-import Home from './components/HomePage/Home.js'
+import Home from './components/MainPage/Main.js'
 import RecipeListContainer from './containers/RecipeListContainer.js'
-import RecipeContainer from './containers/RecipeListContainer.js'
-import RecipeContainer from './containers/RecipeContainer.js'
-import { fetchRecipes } from './actions/RecipeActions';
+import RecipePlannerContainer from './containers/RecipePlannerContainer.js'
+import RecipeFormContainer from './containers/RecipeFormContainer.js'
+import { fetchRecipes } from './actions/recipeActions';
 
 class App extends Component {
 
@@ -21,7 +21,7 @@ class App extends Component {
     render() {
       return (
         <Router >
-          <Navbar />
+          <Nav />
           <Switch>
             <Route exact path='/'component={Home}/>
             <Route exact path='/recipes' component={RecipeListContainer}/>

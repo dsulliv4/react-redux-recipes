@@ -1,9 +1,8 @@
 import React from 'react';
-import './Footer.css';
+import './footer.css';
 import { Link } from 'react-router-dom';
-import { FaLinkedin } from 'react-icons/fa';
 import { MdRestaurantMenu } from 'react-icons/md';
-i
+
 
 function Footer() {
   return (
@@ -31,11 +30,8 @@ function Footer() {
             </Link>
           </div>
           <small className='website-rights'>Deirdre Sullivan © 2021</small>
-          <div className='social-icons'>
-            <a className='social-icon-link' target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/aaron-feingold-1a76ba1b4/' aria-label='LinkedIn'>
-              <FaLinkedin />
-            </a>
-          </div>
+      
+        
         </div>
       </section>
     </div>
