@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  category: MyString
+  description: MyString
+  vegan: false
+  gluten_free: false
+  contains_dairy: false
+  contains_nuts: false
+  image: MyString
+  user_id: 1
+
+two:
+  name: MyString
+  category: MyString
+  description: MyString
+  vegan: false
+  gluten_free: false
+  contains_dairy: false
+  contains_nuts: false
+  image: MyString
+  user_id: 1

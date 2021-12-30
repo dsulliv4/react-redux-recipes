@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_30_021546) do
+ActiveRecord::Schema.define(version: 2021_12_30_102201) do
+
+  create_table "recipes", force: :cascade do |t|
+    t.string "name"
+    t.string "category"
+    t.string "description"
+    t.boolean "vegan"
+    t.boolean "gluten_free"
+    t.boolean "contains_dairy"
+    t.boolean "contains_nuts"
+    t.string "image"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
