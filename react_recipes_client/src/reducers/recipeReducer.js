@@ -1,27 +1,24 @@
 const initialState = {
   loading: true,
-  meals: []
+  recipes: []
 };
 
 export default (state=initialState, action) => {
   switch(action.type){
     case "LOADING":
       return {...state, loading: true};
-    case "LOAD_MEALS":
-      return {...state, loading: false, meals: action.meals};
-    case "ADD_MEAL":
-      console.log('h')
-      return {...state, loading: false, meals: [...state.meals, action.meal]};
-      case "DELETE_MEAL":
-        const filteredMeals = state.meals.filter(meal => meal.id !== action.mealId)
-        return { ...state, meals: filteredMeals }
-      case "UPDATE_MEAL":
-        console.log('h')
-        console.log(action.updatedMeal)
-        let updatedMeal = action.updatedMeal
-        let reFilteredMeals = state.meals.filter(meal => meal.id !== updatedMeal.id)
-        reFilteredMeals.push(action.updatedMeal)
-        return { ...state, meals: reFilteredMeals }
+    case "LOAD_RECIPES":
+      return {...state, loading: false, recipes: action.recipes};
+    case "ADD_RECIPE":
+      return {...state, loading: false, recipes: [...state.recipes, action.recipe]};
+      case "DELETE_RECIPE":
+        const filteredRecipes = state.recipes.filter(recipe => recipe.id !== action.recipeId)
+        return { ...state, recipes: filteredRecipes }
+      case "UPDATE_RECIPE":
+        let updatedRecipe = action.updatedRecipe
+        let reFilteredRecipes = state.recipes.filter(recipe => recipe.id !== updatedRecipe.id)
+        reFilteredRecipes.push(action.updatedRecipe)
+        return { ...state, recipes: reFilteredRecipes }
     default:
       return state;
   };

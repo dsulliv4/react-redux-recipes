@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { withRouter } from 'react-router'
+
+import {withRouter} from 'react-router-dom'
 import { connect } from 'react-redux'
 import { createRecipe, updateRecipe } from '../../actions/recipeActions.js'
 import UpdateRecipe from './UpdateRecipe.js'
