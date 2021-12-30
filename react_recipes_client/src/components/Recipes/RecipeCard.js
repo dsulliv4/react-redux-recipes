@@ -3,7 +3,7 @@ import DeleteRecipeButton from '../Buttons/DeleteRecipeButton.js'
 import EditRecipeButton from '../Buttons/EditRecipeButton'
 import RecipeDescription from './RecipeDescription.js'
 import RecipeFormContainer from '../../containers/RecipeFormContainer.js'
-import './card-style.css'
+import './recipe.css'
 
 
 export class RecipeCard extends Component {
