@@ -1,5 +1,5 @@
 .footer-container {
-  background-color: #1c2237;
+  background-color: #0f3544;
   padding: 4rem 0 2rem 0;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@
 }
 
 .footer-subscription > p {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
 }
 

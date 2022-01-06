@@ -29,13 +29,14 @@ class RecipeListContainer extends Component {
   }
 
   render () {
+    const recipesQueries = this.queryRecipes();
     if (this.props.loading) {
         return <div className="container">This may take a few seconds...</div>
       }
     else {
-      const recipeList = this.queryRecipes().map ((recipe) => {
+      const recipeList = recipesQueries.length > 0 && recipesQueries.map((recipe) => {
         return (
-         <div className="col-md-4" id={recipe.id}>
+         <div className="col-md-4" id={recipe.id} key={recipe.id}>
             <RecipeCard
             key={recipe.id}
             id={recipe.id}
@@ -79,7 +80,7 @@ const mapDispatchToProps = dispatch => ({
 
 const mapStateToProps = state => {
   return {
-      recipes: state.recipeReducer.meals,
+      recipes: state.recipeReducer.recipes,
       loading: state.recipeReducer.loading
   }
 }

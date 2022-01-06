@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { MdRestaurantMenu } from 'react-icons/md'
-import { FaBars, FaTimes } from 'react-icons/fa';
+
 import './navbar.css';
-import { IconContext } from 'react-icons/lib';
+
 
 function Navbar() {
 
@@ -12,17 +11,17 @@ function Navbar() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  return(
+return(
     <>
-    <IconContext.Provider value={{color: '#fff'}}>
+    
     <div className='navbar'>
       <div className='navbar-container container'>
         <NavLink to='/' className="navbar-logo">
-          <MdRestaurantMenu className='navbar-icon' />
+          
           Food Sensitivity Tracker
         </NavLink>
         <div className='menu-icon' onClick={handleClick}>
-          {click ? <FaTimes /> : <FaBars />}
+       
         </div>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className='nav-item'>
@@ -32,25 +31,26 @@ function Navbar() {
           </li>
           <li className='nav-item'>
             <NavLink to='/recipes' className='nav-links' onClick={closeMobileMenu}>
-              Meals
+              Recipes
             </NavLink>
           </li>
           <li className='nav-item'>
             <NavLink to='/recipes/new' className='nav-links' onClick={closeMobileMenu}>
-              Add meal
+              Add recipe
             </NavLink>
           </li>
           <li className='nav-item'>
             <NavLink to='/recipes/planner' className='nav-links' onClick={closeMobileMenu}>
-              Create Meal Tracker
+              Track Recipes with Sensitivies and Allergies
             </NavLink>
           </li>
         </ul>
       </div>
     </div>
-    </IconContext.Provider>
+   
     </>
   )
-}
+} 
 
 export default Navbar;
+

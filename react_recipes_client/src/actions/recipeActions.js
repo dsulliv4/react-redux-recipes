@@ -1,10 +1,10 @@
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "http://localhost:3001";
 
 
 const LOADING = { type: "LOADING" };
 
 const addRecipe = (recipe) => {
-  console.log('g')
+  console.log("addedRecipe", recipe)
   return {
       type: "ADD_RECIPE",
       recipe
@@ -63,7 +63,7 @@ export const updateRecipe = (recipeId, tempRecipe) => {
   console.log('b')
   return (dispatch) => {
     console.log('c')
-      fetch(BASE_URL + "/recipes/" + `${recipeId}`, {
+      fetch(BASE_URL + 'recipes/' + `${recipeId}`, {
           method: "PATCH",
           headers: {
               'Accept': 'application/json',

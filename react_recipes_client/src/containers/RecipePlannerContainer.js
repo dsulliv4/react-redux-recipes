@@ -10,7 +10,7 @@ export class RecipePlannerContainer extends Component {
     return (
       <div className="container">
         <div>
-          <h3>This will be the drag and drop section</h3>
+          <h3>Here are your entries:</h3>
         </div>
       </div>
     )

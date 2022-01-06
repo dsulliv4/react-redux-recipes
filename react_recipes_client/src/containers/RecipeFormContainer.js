@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import RecipeInput from '../components/Forms/RecipeInput';
 
-// in refactoring, what's ridiculous is that this container
-// is now contained in another container
+
 class RecipeFormContainer extends Component {
   render() {
     if (this.props.editing === true){

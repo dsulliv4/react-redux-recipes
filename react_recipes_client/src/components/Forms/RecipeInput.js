@@ -27,10 +27,7 @@ export class RecipeInput extends Component {
     };
 
     handleOnSelect(e) {
-      // a poorly abstracted toggle. however, it suffices as a method. 
-      // Yet, if there are many checkboxes, 
-      // do I need to do it for each case? 
-      // Yes, so I need to make this dynamic...
+      
       if (this.state.vegan === false) {
         this.setState({
           vegan: true
@@ -43,8 +40,7 @@ export class RecipeInput extends Component {
       }
     }
     
-    // console logging here to make sure asyc react is correct...
-    // handles creation of new object, dispatches to backend...
+    
     handleOnCreate = (e) => {
       e.preventDefault();
       if (this.validateForm()) {
@@ -58,8 +54,7 @@ export class RecipeInput extends Component {
         this.props.createRecipe(recipeData, this.props.history);
         console.log('e')}
       };
-    // these two look earily similar, thus can be refactored into one.
-    // how exactly--will it require changing a lot of props now, and variables...
+    
 
     handleOnUpdate =(e) => {
       debugger;
@@ -71,15 +66,12 @@ export class RecipeInput extends Component {
         const tempRecipe = {
           recipe: tempState
         };
-        // onEdingChange is passed down from MealCard as Parent
-        // this is double to ensure that editing is no longer true in any state anywhere in application
+        
         console.log('calling onUpdateSubmit')
         this.props.onUpdateSubmit();
-        // onUpdateSubmit basically only changes state.editing of parent (MealCard)
-        // back from to false, as we are no longer editing. now its up to the servers to do their async magics...
-        console.log('a')
+        
         this.props.updateRecipe(this.props.id, tempRecipe);
-        console.log('e')
+       
       }
       };
 
@@ -130,8 +122,7 @@ export class RecipeInput extends Component {
       errors['name'] = '*Please enter a name for this meal'
       document.querySelector('div.errorMsg').parentNode.scrollIntoView({ behavior: 'smooth' })
     }
-    // ok, but if you only have one validation on front end
-    // and no validations of errors being sent anywhere receive on front end...jams up before being sent
+    
 
     this.setState({ errors })
     
