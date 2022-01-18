@@ -38,9 +38,7 @@ export const fetchRecipes = () => {
 }
 
 export const createRecipe = (recipeData, history) => {
-  console.log('b')
   return (dispatch) => {
-    console.log('c')
       fetch(BASE_URL + "/recipes", {
           method: "POST",
           headers: {
@@ -51,18 +49,18 @@ export const createRecipe = (recipeData, history) => {
       })
           .then( resp => resp.json() )
           .then( recipe => {
-              console.log('f')
+          
               dispatch(addRecipe(recipe));
               history.push('/recipes');
           })
-        console.log('d')
+      
   }
 }
 
 export const updateRecipe = (recipeId, tempRecipe) => {
-  console.log('b')
+
   return (dispatch) => {
-    console.log('c')
+    
       fetch(BASE_URL + 'recipes/' + `${recipeId}`, {
           method: "PATCH",
           headers: {
@@ -73,10 +71,10 @@ export const updateRecipe = (recipeId, tempRecipe) => {
       })
           .then( resp => resp.json() )
           .then( updatedRecipe => {
-              console.log('f')
+              
               dispatch(updateRecipeCard(updatedRecipe));
           })
-        console.log('d')
+        
   }
 
 }
