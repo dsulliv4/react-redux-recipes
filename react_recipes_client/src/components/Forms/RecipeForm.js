@@ -32,6 +32,8 @@ const RecipeForm = (props) => {
             <input type="checkbox" value={props.vegan} className="form-check-input" name="vegan" id="vegan" onChange={(event) => props.handleOnSelect(event)} />
             <label className="form-check-label"> {vegan_message}</label>
           </div>
+          <br></br>
+          <br></br>
       </div>
   
   )

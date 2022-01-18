@@ -34,7 +34,7 @@ class RecipesController < ApplicationController
   end
 
   # DELETE /recipes/1
-  def destroy
+  def delete
     @recipe.destroy
   end
 

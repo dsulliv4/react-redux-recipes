@@ -34,7 +34,7 @@ class UsersController < ApplicationController
   end
 
   # DELETE /users/1
-  def destroy
+  def delete
     @user.destroy
   end
 
@@ -45,7 +45,5 @@ class UsersController < ApplicationController
     end
 
     # Only allow a trusted parameter "white list" through.
-    def user_params
-      params.require(:user).permit(:username, :password, :password_confirmation)
-    end
+    
 end

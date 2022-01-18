@@ -1,5 +1,5 @@
 .navbar {
-  background: #1ec7c7;
+  background: #1bb374;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -8,6 +8,7 @@
   position: sticky;
   top: 0;
   z-index: 999;
+  margin-bottom: 100px;
 }
 
 .navbar-container {

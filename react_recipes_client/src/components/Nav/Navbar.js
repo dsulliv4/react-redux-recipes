@@ -39,11 +39,10 @@ return(
               Add recipe
             </NavLink>
           </li>
-          <li className='nav-item'>
-            <NavLink to='/recipes/planner' className='nav-links' onClick={closeMobileMenu}>
-              Track Recipes with Sensitivies and Allergies
-            </NavLink>
-          </li>
+        <br></br>
+        <br></br>
+        <br></br>
+        
         </ul>
       </div>
     </div>
